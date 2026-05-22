@@ -1,8 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
-
 
 #define DEF 0
 #define NAV 1
@@ -67,8 +65,8 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             label = "MEH";
-            mods = <(MOD_RSFT|MOD_RCTL|MOD_RALT)>;
-            bindings = <&none>;
+            mods = <(MOD_RSFT|MOD_RCTL)>;
+            bindings = <&kp RIGHT_ALT>;
         };
     };
 
@@ -153,5 +151,3 @@
         };
     };
 };
-
-    
