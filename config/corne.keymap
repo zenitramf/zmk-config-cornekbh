@@ -60,14 +60,6 @@
             require-prior-idle-ms = <120>;
             label = "HM_LAYER";
         };
-
-        meh: meh {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            label = "MEH";
-            mods = <(MOD_RSFT|MOD_RCTL)>;
-            bindings = <&kp RIGHT_ALT>;
-        };
     };
 
     combos { compatible = "zmk,combos"; };
