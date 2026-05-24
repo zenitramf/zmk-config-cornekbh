@@ -60,6 +60,15 @@
             require-prior-idle-ms = <120>;
             label = "HM_LAYER";
         };
+
+        tapdance_backspace: tapdance_backspace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_BACKSPACE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT BACKSPACE>, <&kp BACKSPACE>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -79,10 +88,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB           &kp Q           &kp W  &kp F          &kp P        &kp G            &kp J                     &kp L        &kp U                  &kp Y    &kp SEMICOLON  &kp BACKSLASH
-&mt LSHFT ESCAPE  &kp A           &kp R  &hm_layer 4 S  &kp T        &kp D            &kp H                     &kp N        &kp E                  &kp I    &kp O          &kp SQT
-&kp LG(TAB)       &mt LEFT_ALT Z  &kp X  &kp C          &kp V        &kp B            &kp K                     &kp M        &kp COMMA              &kp DOT  &kp FSLH       &kp BACKSPACE
-                                         &kp LGUI       &lt 1 ENTER  &mt LCTRL TAB    &mt LEFT_SHIFT BACKSPACE  &lt 2 SPACE  &kp RS(RC(RIGHT_ALT))
+&kp TAB           &kp Q           &kp W  &kp F          &kp P        &kp G            &kp J                &kp L        &kp U                  &kp Y    &kp SEMICOLON  &kp BACKSLASH
+&mt LSHFT ESCAPE  &kp A           &kp R  &hm_layer 4 S  &kp T        &kp D            &kp H                &kp N        &kp E                  &kp I    &kp O          &kp SQT
+&kp LG(TAB)       &mt LEFT_ALT Z  &kp X  &kp C          &kp V        &kp B            &kp K                &kp M        &kp COMMA              &kp DOT  &kp FSLH       &kp BACKSPACE
+                                         &kp LGUI       &lt 1 ENTER  &mt LCTRL TAB    &tapdance_backspace  &lt 2 SPACE  &kp RS(RC(RIGHT_ALT))
             >;
         };
 
